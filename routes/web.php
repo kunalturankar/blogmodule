@@ -20,3 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/posts', 'PostsController@index')->name('posts');
+Route::get('/post/{id}', 'PostsController@show')->name('post.view');
+Route::get('/my-post', 'PostsController@myPost')->name('my.post');
+Route::get('/add-post', 'PostsController@addPost')->name('add.post');
+Route::post('/save-post', 'PostsController@savePost')->name('save.post');
