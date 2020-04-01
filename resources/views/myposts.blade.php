@@ -12,7 +12,8 @@
                 {{ $post->post_title }}
                 </a>
                 </div>
-                <div class="card-body">{{ $post->post_description }}</div>
+                <div class="card-body">{{ $post->post_description }}<a class="card-link" href = "{{ delete.post}}">Delete</a></div>
+
             </div><br />
             @endforeach
         </div>

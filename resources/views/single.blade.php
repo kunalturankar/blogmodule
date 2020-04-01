@@ -11,6 +11,7 @@
                 
                 <br />
                 <hr />
+                <div class="alert alert-success"><h3 class="text-secondary">Comments</h3></div>
                 @foreach($post->comments as $comment)
                 <div class="card">
                     <div class="card-header">{{ $comment->name }}</div>

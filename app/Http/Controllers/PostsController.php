@@ -56,4 +56,26 @@ class PostsController extends Controller
         
        return back();
     }
+
+    public function deletePost(Request $request){
+        // dd($request);
+        $user_id = Auth::user()->id;
+
+       
+        // $postCreated=null;
+        $postdeleted = Post::delete(
+            [
+            "post_title"=>$request->post_title,
+            "post_description"=>$request->post_description,
+            "user_id"=>$user_id,
+            ]
+        );
+        if($postdeleted){
+            Session::flash("success","Post has been deleted");
+        }else{
+            Session::flash("failed","Post didn't deleted");
+        }
+        
+       return back();
+    }
 }

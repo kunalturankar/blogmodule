@@ -26,3 +26,4 @@ Route::get('/post/{id}', 'PostsController@show')->name('post.view');
 Route::get('/my-post', 'PostsController@myPost')->name('my.post');
 Route::get('/add-post', 'PostsController@addPost')->name('add.post');
 Route::post('/save-post', 'PostsController@savePost')->name('save.post');
+Route::post('/delete-post', 'PostsController@deletePost')->name('delete.post');
